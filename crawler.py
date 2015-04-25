@@ -8,11 +8,11 @@ import tweepy
 from slistener import StrListener
 
 
-#Variables that contains the user credentials to access Twitter API
-access_token = "752969209-kYFzZn4VuEA1VvMyB9ShmMdWDKrp9bxXGGSAAPzQ"
-access_token_secret = "YYFcHDUpfdSrJGynkaPQLoJh6MMmWOPiqdVxcJecCzHhH"
-consumer_key = "Ner7LBAEmFkGfPKaqOiCnW6Xj"
-consumer_secret = "NwbWWGQCFJQR3rbVxkI4yuyizkwDSUcP5ptz6Y6vNZoT8CIsry"
+#Variables that contains the user credentials to access Twitter API, replace the token&key with yours
+access_token = "your access_token"
+access_token_secret = "your token secret
+consumer_key = "your consumer_key "
+consumer_secret = "your key secret"
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -33,7 +33,6 @@ if __name__ == '__main__':
     stream = tweepy.Stream(auth, l)
     print("Connecting to twitter, download in process, please wait...")
 
-    #This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
     try:
         stream.sample()
     except:
